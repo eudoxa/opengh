@@ -1,0 +1,48 @@
+{
+  "name": "opengh",
+  "displayName": "Open in GitHub",
+  "description": "Open current file in GitHub/GitHub Enterprise with line selection",
+  "version": "0.0.1",
+  "publisher": "eudoxa",
+  "author": "eudoxa",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eudoxa/opengh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eudoxa/opengh/issues"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "opengh.openInGitHub",
+        "title": "Open in GitHub"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "24.10.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3"
+  }
+}
